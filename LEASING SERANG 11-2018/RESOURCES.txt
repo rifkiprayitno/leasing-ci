@@ -1,2 +1,4 @@
 https://www.initekno.com/category/codeigniter/
 (- bahasan lengkap HMVC, templating, user akses)
+
+https://www.malasngoding.com/menghilangkan-index-php-pada-codeigniter/

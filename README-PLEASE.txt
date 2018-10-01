@@ -12,4 +12,4 @@ aplikasi leasing ci
 - kasus aplikasi akan digunakan untuk leasing barang2 rumah tangga, ie. tv, lemari, sofa dll.
 - detail kasus, dokumentasi/contoh data, resources ada di folder LEASING SERANG 11-2018
 - akan ada timeline untuk melihat rekam jejak pelanggan
-- validasi user menggunakan no ho dan ktp
+- validasi user menggunakan no hp dan ktp

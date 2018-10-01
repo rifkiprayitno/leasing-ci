@@ -1,2 +1,15 @@
-#26/09/2018 => implementasi HMVC pada CI 3.1.9 	=> Rifki
-#26/09/2018 => layouting dgn ElaAdmin => Rifki
+#26/09/2018 => implementasi HMVC pada CI 3.1.9 	=> RIFKI
+#26/09/2018 => layouting dgn ElaAdmin => RIFKI
+
+#28/09/2018 => Penambahan alert_helper (helper) utk sweetalert => RIFKI
+#28/09/2018 => penambahan ACL, user Role => RIFKI
+#28/09/2018 => Login, Logout berhasil (application/modules/auth)=> RIFKI
+#28/09/2018 => DataTable client side bisa di gunakan! => RIFKI
+#28/09/2018 => menambahkan fungsi show users => RIFKI
+#28/09/2018 => menambahkan User_model => RIFKI
+#28/09/2018 => menghilangkan index.php => RIFKI
+
+#01/10/2018 => insert, update, delete, select utk modules users => RIFKI
+#01/10/2018 => menambahkan validasi modules users, config/form_validation 'registration' => RIFKI
+#01/10/2018 => menampilkan validasi input dengan alert bootstrap => RIFKI
+#01/10/2018 => GALAT, mnampilkan alert konfirmasi hapus data => RIFKI

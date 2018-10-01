@@ -13,12 +13,16 @@
     <title>
         <?php
         echo (isset($title)) ? $title : 'Ela - Bootstrap Admin Dashboard Template';
-        ?>
-        
+        ?>        
     </title>
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="<?php echo base_url('assets/icons/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet">
+
+    <!-- Sweetalert CSS -->
+    <link href="<?php echo base_url('assets/css/lib/sweetalert/sweetalert.css'); ?>" rel="stylesheet">
+    <!-- Toastr CSS -->
+    <link href="<?php echo base_url('assets/css/lib/toastr/toastr.min.css'); ?>" rel="stylesheet">
 
     <link href="<?php echo base_url('assets/css/lib/chartist/chartist.min.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/lib/owl.carousel.min.css'); ?>" rel="stylesheet" />
@@ -237,7 +241,7 @@
                                     <li><a href="#"><i class="ti-wallet"></i> Balance</a></li>
                                     <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
                                     <li><a href="#"><i class="ti-settings"></i> Setting</a></li>
-                                    <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                                    <li><a href="<?php echo base_url('auth/logout'); ?>"><i class="fa fa-power-off"></i> Logout</a></li>
                                 </ul>
                             </div>
                         </li>

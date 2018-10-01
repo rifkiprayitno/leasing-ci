@@ -14,11 +14,10 @@
                             </ul>
                         </li>
                         <li class="nav-label">Apps</li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Email</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Pengguna</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="email-compose.html">Compose</a></li>
-                                <li><a href="email-read.html">Read</a></li>
-                                <li><a href="email-inbox.html">Inbox</a></li>
+                                <li><a href="<?php echo base_url('users/tambah'); ?>">Tambah</a></li>
+                                <li><a href="<?php echo base_url('users/index'); ?>">Lihat</a></li>
                             </ul>
                         </li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-bar-chart"></i><span class="hide-menu">Charts</span></a>
