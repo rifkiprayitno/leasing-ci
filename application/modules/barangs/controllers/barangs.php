@@ -21,14 +21,14 @@ class Barangs extends MX_Controller
         // function ini hanya boleh diakses oleh superadmin/owner =3 dan admin=1 dengan kode akses 
         if($this->session->userdata('akses')=='1' || $this->session->userdata('akses')=='3'){
 
-            $data['title'] = 'index | Users';
+            $data['title'] = 'index | Barangs';
             $data['breadcrumb'] = array(
                                 base_url('')      => "Home"
                             );
-            $data['breadcrumb_active'] = 'Users';        
-            $data['tampil'] = $this->User_model->tampil();
+            $data['breadcrumb_active'] = 'Barangs';        
+            $data['tampil'] = $this->Barang_model->tampil();
 
-            $page = 'users/user_index';
+            $page = 'barangs/barang_index';
 
             echo modules::run('template/loadview', $data, $page);
         }else{
@@ -54,22 +54,22 @@ class Barangs extends MX_Controller
                     $insert = $this->Barang_model->tambah($barang);
 
                     if ($insert) {
-                        sa_alert('success', 'Mantul..', 'Data baru berhasil di simpan', base_url('users'));
+                        sa_alert('success', 'Mantul..', 'Data baru berhasil di simpan', base_url('barangs'));
                     } else {
                         sa_alert('error', 'Oops..', 'Gagal menyimpan data baru!!!', base_url('barangs/tambah'));
                     } 
                 //}                
             }
 
-            $data['title']            = 'index | Users';
+            $data['title']            = 'index | Barangs';
             $data['breadcrumb']       = array(
                     base_url('')      => "Home",
                     base_url('barangs') => "Barang"
                 );
             $data['breadcrumb_active']= 'Barangs Baru';        
-            $data['barang']             = $barang;
+            //$data['barang']             = $barang;
 
-            $page = 'users/user_form';
+            $page = 'barangs/barang_form';
 
             echo modules::run('template/loadview', $data, $page);
         }else{
@@ -97,7 +97,7 @@ class Barangs extends MX_Controller
                               
 
                 if ($this->form_validation->run('registrasi') == TRUE) {   //menjalankan validasi
-                    $update = $this->User_model->ubah($user, $id); //menjalankan update
+                    $update = $this->barang_model->ubah($barang, $id); //menjalankan update
                     
                     if ($update) {
                         //echo $this->db->last_query();
@@ -109,13 +109,13 @@ class Barangs extends MX_Controller
                
             }
 
-            $data['title']             = 'index | Users';
+            $data['title']             = 'index | barangs';
             $data['breadcrumb']        = array(
                                 base_url('')      => "Home",
                                 base_url('barangs') => "Barangs"
                             );
             $data['breadcrumb_active'] = 'Update Barang Lama';        
-            $data['barang']              = $user;
+            $data['barang']              = $barang;
             $page = 'barangs/barang_form';
 
             echo modules::run('template/loadview', $data, $page);
