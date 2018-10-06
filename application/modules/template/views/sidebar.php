@@ -26,6 +26,18 @@
                                 <li><a href="<?php echo base_url('barangs/index'); ?>">Lihat</a></li>
                             </ul>
                         </li>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Aplikasi</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="<?php echo base_url('aplikasis/tambah'); ?>">Tambah</a></li>
+                                <li><a href="<?php echo base_url('aplikasis/index'); ?>">Lihat</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Angsuran</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="<?php echo base_url('angsurans/tambah'); ?>">Tambah</a></li>
+                                <li><a href="<?php echo base_url('angsurans/index'); ?>">Lihat</a></li>
+                            </ul>
+                        </li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-bar-chart"></i><span class="hide-menu">Charts</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="chart-flot.html">Flot</a></li>
