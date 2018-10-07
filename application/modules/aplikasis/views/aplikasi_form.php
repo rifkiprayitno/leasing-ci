@@ -27,8 +27,8 @@
                                 <label class="control-label">Barang</label>
                                 <select class="form-control custom-select" name="barang" required>
                                     <?php
-                                        foreach ($barang as $baris) {
-                                            echo "<option value='".$baris->barang_id."'>$baris->barang_nama</option>";
+                                        foreach ($barang as $barangs) {
+                                            echo "<option value='".$barangs->barang_id."'>$barangs->barang_nama</option>";
                                         }
                                     ?>
                                 </select>
@@ -38,9 +38,11 @@
                             <div class="form-group">
                                 <label class="control-label">User</label>
                                 <select class="form-control custom-select" name="user" required>
-                                    <option value="admin" <?php echo (isset($user[0]) && $user[0]['level'] == 'admin') ? 'selected' : ''; ?> >Administrator</option>
-                                    <option value="owner" <?php echo (isset($user[0]) && $user[0]['level'] == 'owner') ? 'selected' : ''; ?>>Owner</option>
-                                    <option value="member" <?php echo (isset($user[0]) && $user[0]['level'] == 'member') ? 'selected' : ''; ?>>Pelanggan</option>
+                                    <?php
+                                        foreach ($user as $users) {
+                                            echo "<option value='".$users->user_id."'>$users->nama</option>";
+                                        }
+                                    ?>
                                 </select>
                             </div>
                         </div>
@@ -98,14 +100,14 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">Awal Tempo</label>
-                                <input type="text" id="awal_tempo" name="awal_tempo" class="form-control" value="" required>
+                                <input type="date" id="awal_tempo" name="awal_tempo" class="form-control" value="" required>
                                 <small class="form-control-feedback">  </small> 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">Jatuh Tempo</label>
-                                <input type="text" id="jatuh_tempo" name="jatuh_tempo" class="form-control" value="" required>
+                                <input type="date" id="jatuh_tempo" name="jatuh_tempo" class="form-control" value="" required>
                                 <small class="form-control-feedback">  </small> 
                             </div>
                         </div>

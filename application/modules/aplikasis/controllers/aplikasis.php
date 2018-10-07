@@ -7,9 +7,9 @@ class Aplikasis extends MX_Controller
     function __construct()
     {        
         parent::__construct();
-        $this->load->model('Aplikasi_model');
-        $this->load->model('Barang_model');
-        $this->load->model('User_model');
+        $this->load->model('Aplikasi_model','Barang_model','User_model');
+        //$this->load->model('Barang_model');
+        //$this->load->model('User_model');
         $this->load->helper('alert'); //untuk menampilkan sweetalert sa_alert() 
         $this->load->library('form_validation'); //untuk melakukan validasi inputan      
         //validasi jika user belum login
@@ -28,7 +28,7 @@ class Aplikasis extends MX_Controller
                                 base_url('')      => "Home"
                             );
             $data['breadcrumb_active'] = 'Aplikasis';        
-            $data['tampil'] = $this->Barang_model->tampil();
+            $data['tampil'] = $this->Aplikasi_model->tampil();
 
             $page = 'aplikasis/aplikasi_index';
 
@@ -44,11 +44,20 @@ class Aplikasis extends MX_Controller
             $user = array();
             if ($this->input->method() == "post") {
                  $aplikasi = array(array(
-                        'barang_nama'     => $this->input->post("barang_nama"),
-                        'harga'     => $this->input->post("harga"),
-                        'insentif'      => $this->input->post("insentif"),
-                        'detail'    => $this->input->post("detail"),
-                        'created_at' => date("Y-m-d H:i:s")
+                        'aplikasi_kode'     => $this->input->post("aplikasi_kode"),
+                        'barang_id'         => $this->input->post("barang_id"),
+                        'user_id'           => $this->input->post("user_id"),
+                        'barang_harga'      => $this->input->post("barang_harga"),
+                        'barang_insentif'   => $this->input->post("barang_insentif"),
+                        'dp'                => $this->input->post("dp"),
+                        'angsuran'          => $this->input->post("angsuran"),
+                        'tenor'             => $this->input->post("tenor"),
+                        'total'             => $this->input->post("total"),
+                        'tanggal_berlaku'   => $this->input->post("tanggal_berlaku"),
+                        'awal_tempo'        => $this->input->post("awal_tempo"),
+                        'jatuh_tempo'       => $this->input->post("jatuh_tempo"),
+                        'status'            => $this->input->post("status"),
+                        'created_at'        => date("Y-m-d H:i:s")
                     ));
                 // if ($this->form_validation->run('registrasi') == TRUE) {                  
                 //     $user[0]['password'] = md5($this->input->post("password")); //tambah password ke array $user
@@ -91,11 +100,20 @@ class Aplikasis extends MX_Controller
                         $user[0]['password']  = md5($this->input->post("password"));
                 } 
                 $aplikasi = array(array(
-                    'barang_nama'     => $this->input->post("barang_nama"),
-                    'harga'     => $this->input->post("harga"),
-                    'insentif'      => $this->input->post("insentif"),
-                    'detail'    => $this->input->post("detail"),
-                    'update_at' => date("Y-m-d H:i:s")
+                    'aplikasi_kode'     => $this->input->post("aplikasi_kode"),
+                        'barang_id'         => $this->input->post("barang_id"),
+                        'user_id'           => $this->input->post("user_id"),
+                        'barang_harga'      => $this->input->post("barang_harga"),
+                        'barang_insentif'   => $this->input->post("barang_insentif"),
+                        'dp'                => $this->input->post("dp"),
+                        'angsuran'          => $this->input->post("angsuran"),
+                        'tenor'             => $this->input->post("tenor"),
+                        'total'             => $this->input->post("total"),
+                        'tanggal_berlaku'   => $this->input->post("tanggal_berlaku"),
+                        'awal_tempo'        => $this->input->post("awal_tempo"),
+                        'jatuh_tempo'       => $this->input->post("jatuh_tempo"),
+                        'status'            => $this->input->post("status"),
+                        'update_at'         => date("Y-m-d H:i:s")
                 ));
                               
 
