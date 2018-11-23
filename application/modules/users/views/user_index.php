@@ -39,9 +39,9 @@
                         <td><?php echo $baris->handphone; ?></td>
                         <td><?php echo substr($baris->alamat, 0,12); ?>..</td>
                         <td>
-                            <a href="<?php echo 'users/ubah/'.$baris->user_id; ?>">Lihat</a>
-                            <a class="edit-link" href="<?php echo 'users/ubah/'.$baris->user_id; ?>">Edit</a>
-                            <a class="hapus-link" href="<?php echo 'users/hapus/'.$baris->user_id; ?>">Hapus</a>                          
+                            <a href="<?php echo base_url('users/ubah/'.$baris->user_id); ?>" class="btn btn-primary btn-flat btn-addon btn-sm m-b-10 m-l-5" title="Lihat Data"><i class="fa fa-eye"></i></a>
+                            <a class="edit-link btn btn-warning btn-flat btn-addon btn-sm m-b-10 m-l-5" title="Edit Data" href="<?php echo base_url('users/ubah/'.$baris->user_id); ?>"><i class="fa fa-edit"></i></a>
+                            <a class="hapus-link btn btn-danger btn-flat btn-addon btn-sm m-b-10 m-l-5" title="Hapus Data" href="<?php echo base_url('users/hapus/'.$baris->user_id); ?>"><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>  
                 <?php } ?>                                                              

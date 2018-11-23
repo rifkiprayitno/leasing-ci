@@ -13,3 +13,12 @@
 #01/10/2018 => menambahkan validasi modules users, config/form_validation 'registration' => RIFKI
 #01/10/2018 => menampilkan validasi input dengan alert bootstrap => RIFKI
 #01/10/2018 => GALAT, mnampilkan alert konfirmasi hapus data => RIFKI
+
+#01/11/2018 => menambahkan template baru, update ela admin => RIFKI
+#01/11/2018 => menerapkan template baru => RIFKI
+#01/11/2018 => menambakan modul aplikasi => RIFKI
+
+#10/11/2018 => menambakan modul angsuran => RIFKI
+#10/11/2018 => menerapkan modal datatable pada view index angsuran => RIFKI
+
+#21/11/2018 => module angsuran sudah berjalan, insert&update => RIFKI

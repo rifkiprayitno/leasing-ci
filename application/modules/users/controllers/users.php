@@ -28,9 +28,9 @@ class Users extends MX_Controller
             $data['breadcrumb_active'] = 'Users';        
             $data['tampil'] = $this->User_model->tampil();
 
-            $page = 'users/user_index';
+            $page = 'users/user_index_2';
 
-            echo modules::run('template/loadview', $data, $page);
+            echo modules::run('new_template/loadview', $data, $page);
         }else{
               sa_alert('error', 'Oops..!', 'Anda tidak memiliki hak akses!!!', base_url('auth'));
         }
@@ -73,7 +73,7 @@ class Users extends MX_Controller
 
             $page = 'users/user_form';
 
-            echo modules::run('template/loadview', $data, $page);
+            echo modules::run('new_template/loadview', $data, $page);
         }else{
               sa_alert('error', 'Oops..!', 'Anda tidak memiliki hak akses!!!', base_url('auth'));
         }
@@ -123,7 +123,7 @@ class Users extends MX_Controller
             $data['user']              = $user;
             $page = 'users/user_form';
 
-            echo modules::run('template/loadview', $data, $page);
+            echo modules::run('new_template/loadview', $data, $page);
         }else{
               sa_alert('error', 'Oops..!', 'Anda tidak memiliki hak akses!!!', base_url('auth'));
         }
@@ -142,6 +142,33 @@ class Users extends MX_Controller
             } 
         }                
     }
+
+    //method for datatable server side, hanya memanggil Model
+    function get_user_json() { //get product data and encode to be JSON object//percobaan datatable server side
+      header('Content-Type: application/json');
+      echo $this->User_model->get_all_user();
+    }
+
+    function profile()
+    {
+        // function ini hanya boleh diakses oleh superadmin/owner =3 dan admin=1 dengan kode akses 
+        if($this->session->userdata('akses')=='1' || $this->session->userdata('akses')=='3'){
+
+            $data['title'] = ' Users Profile';
+            $data['breadcrumb'] = array(
+                                base_url('')      => "Home"
+                            );
+            $data['breadcrumb_active'] = 'Profile';        
+            $data['tampil'] = $this->User_model->tampil();
+
+            $page = 'users/user_profile';
+
+            echo modules::run('new_template/loadview', $data, $page);
+        }else{
+              sa_alert('error', 'Oops..!', 'Anda tidak memiliki hak akses!!!', base_url('auth'));
+        }
+    }
+
 
 }
 ?>

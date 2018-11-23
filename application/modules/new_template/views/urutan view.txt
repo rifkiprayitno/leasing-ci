@@ -1,0 +1,6 @@
+1->header
+2->left_panel (sidebar)
+3->right_panel (header)
+4->historian
+5->CONTENT
+6->footer

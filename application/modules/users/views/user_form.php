@@ -1,7 +1,11 @@
-<div class="col-lg-10">
+<div class="content">
+<div class="animated fadeIn">
+<div class="row">
+
+<div class="col-lg-12">
     <div class="card card-outline-primary">
         <div class="card-header">
-            <h4 class="m-b-0 text-white">Form <?php echo (isset($user)) ? 'Update User Lama' : 'User Baru'; ?></h4>
+            <h4 class="m-b-0 text-black">Form <?php echo (isset($user[0])) ? 'Update User Lama' : 'User Baru'; ?></h4>
         </div>
         <div class="card-body">
             
@@ -171,3 +175,8 @@
         </div>
     </div>
 </div>
+
+
+</div><!-- .row -->
+</div><!-- .animated -->
+</div><!-- .content -->
