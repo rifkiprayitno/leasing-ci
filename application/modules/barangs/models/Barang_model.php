@@ -7,6 +7,10 @@ class Barang_model extends CI_Model
 	
 	public function tampil()
 	{
+<<<<<<< HEAD
+=======
+		# code...
+>>>>>>> c023b1a3eb82b5762c1ec0628674c6a699dbf9fb
 		$data = $this->db->query("SELECT * FROM barangs");
 		return $data->result();
 	}
@@ -35,6 +39,7 @@ class Barang_model extends CI_Model
 		$this->db->where('barang_id', $id);
 		return $this->db->delete('barangs');	
 	}
+<<<<<<< HEAD
 
 	//generate dataTable serverside method
 	function get_all_barang() { //datatable server side, colom sesuaikan dgn tabel jgn di lebihi id saja
@@ -48,5 +53,7 @@ class Barang_model extends CI_Model
       	, 'barang_id, barang_nama, harga, insentif, detail');
       return $this->datatables->generate();
   }
+=======
+>>>>>>> c023b1a3eb82b5762c1ec0628674c6a699dbf9fb
 }
  ?>
