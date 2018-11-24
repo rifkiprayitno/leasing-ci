@@ -7,7 +7,6 @@ class Aplikasi_model extends CI_Model
 	
 	public function tampil()
 	{
-<<<<<<< HEAD
 		$data = $this->db->query("SELECT * FROM aplikasis a, Users u, Barangs b
 							WHERE u.user_id=a.aplikasi_user_id AND a.aplikasi_barang_id=b.barang_id");
 		return $data->result();
@@ -69,17 +68,6 @@ class Aplikasi_model extends CI_Model
 		$this->db->join('barangs', 'barangs.barang_id = aplikasis.aplikasi_barang_id');
 		$this->db->join('users', 'users.user_id = aplikasis.aplikasi_user_id');
 		$this->db->where('apliaksi_id', $where);
-=======
-		# code...
-		$data = $this->db->query("SELECT * FROM aplikasis");
-		return $data->result();
-	}
-
-	public function detail($id)
-	{
-		$this->load->database();
-		$this->db->where('aplikasi_id', $id);
->>>>>>> c023b1a3eb82b5762c1ec0628674c6a699dbf9fb
 		return $this->db->get("aplikasis")->result_array();
 	}
 
@@ -91,11 +79,7 @@ class Aplikasi_model extends CI_Model
 
 	public function ubah($data = array(), $id){
 		$this->load->database();
-<<<<<<< HEAD
 		$this->db->where('apliaksi_id', $id);
-=======
-		$this->db->where('aplikasi_id', $id);
->>>>>>> c023b1a3eb82b5762c1ec0628674c6a699dbf9fb
 		return $this->db->update('aplikasis', $data[0]);
 	}
 
