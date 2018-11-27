@@ -193,7 +193,7 @@
             processing: true,
             serverSide: true,
             "ajax": {
-                "url": '<?php echo site_url('Provinsis/get_Provinsi_json'); ?>',
+                "url": '<?php echo site_url('Provinsis/get_provinsi_json'); ?>',
                 "type": "POST"
             },
             //Set column definition initialisation properties.
@@ -216,10 +216,8 @@
               // end setup datatables
             // get Edit Records
             $('#data-table-Provinsi').on('click','.edit_record',function(){
-                var code    =$(this).data('code');
                 var name    =$(this).data('nama');
             $('#modalUbahProvinsi').modal('show');
-                    $('[name="product_code"]').val(code);
                     $('[name="Provinsi_nama"]').val(name);
       });
             // End Edit Records

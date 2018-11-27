@@ -130,9 +130,9 @@ class Provinsis extends MX_Controller
     }
 
     //method for datatable server side, hanya memanggil Model
-    function get_Provinsi_json() { //get product data and encode to be JSON object//percobaan datatable server side
+    function get_provinsi_json() { //get product data and encode to be JSON object//percobaan datatable server side
       header('Content-Type: application/json');
-      echo $this->Provinsi_model->get_all_Provinsi();
+      echo $this->Provinsi_model->get_all_provinsi();
     }
 
 }

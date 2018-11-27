@@ -30,7 +30,7 @@ class Provinsi_model extends CI_Model
 	}
 
 	//generate dataTable serverside method
-	function get_all_user() { //datatable server side, colom sesuaikan dgn tabel jgn di lebihi id saja
+	function get_all_provinsi() { //datatable server side, colom sesuaikan dgn tabel jgn di lebihi id saja
       $this->datatables->from('provinsis p');
       //select kolom yang dimunculkan di tabel saja, bila tidak search|sort tidak akan berjalan
       $this->datatables->select('nama, user_id');
