@@ -8,6 +8,19 @@
                     </li>
                     <li class="menu-title">App</li><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-address-book"></i>Provinsi</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-plus-circle"></i><a href="<?php echo base_url('provinsis/tambah'); ?>">&nbsp;Tambah</a></li>
+                            <li><i class="fa fa-eye"></i><a href="<?php echo base_url('provinsis/index'); ?>">&ensp;Lihat</a></li>
+                        </ul>
+                    </li><li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-address-book"></i>Kabkota</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-plus-circle"></i><a href="<?php echo base_url('kabkotas/tambah'); ?>">&nbsp;Tambah</a></li>
+                            <li><i class="fa fa-eye"></i><a href="<?php echo base_url('kabkotas/index'); ?>">&ensp;Lihat</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-address-book"></i>Pengguna</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-plus-circle"></i><a href="<?php echo base_url('users/tambah'); ?>">&nbsp;Tambah</a></li>

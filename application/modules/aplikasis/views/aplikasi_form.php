@@ -30,21 +30,21 @@
                                 <small class="form-control-feedback"> Isi aplikasi kode </small> 
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <!--<div class="col-md-6">
                             <div class="form-group">
-                                <label class="control-label">user_id</label>
-                                <input type="text" id="id_user_id" name="id_user_id" class="form-control autocomplete" >
-                                <small class="form-control-feedback"> Isi aplikasi kode </small> 
-                            </div>
+                                <label class="control-label">user_id</label>-->
+                                <input type="hidden" id="id_user_id" name="id_user_id" class="form-control autocomplete" >
+                                <!--<small class="form-control-feedback"> Isi aplikasi kode </small>-->
+                            <!--</div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="control-label">barang_id</label>
-                                <input type="text" id="barang_id" name="barang_id" class="form-control autocomplete" >
-                                <small class="form-control-feedback"> Isi aplikasi kode </small> 
+                                <label class="control-label">barang_id</label>-->
+                                <input type="hidden" id="barang_id" name="barang_id" class="form-control autocomplete" >
+                                <!--<small class="form-control-feedback"> Isi aplikasi kode </small>
                             </div>
                         </div>
-                        <!--/span-->
+                        </span-->
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">Barang</label>
