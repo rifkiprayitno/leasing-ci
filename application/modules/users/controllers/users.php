@@ -8,6 +8,7 @@ class Users extends MX_Controller
     {        
         parent::__construct();
         $this->load->model('User_model');
+        $this->load->model('auth/Login_model');
         $this->load->helper('alert'); //untuk menampilkan sweetalert sa_alert() 
         $this->load->library('form_validation'); //untuk melakukan validasi inputan      
         //validasi jika user belum login
@@ -169,6 +170,56 @@ class Users extends MX_Controller
         }
     }
 
+    function cek_password(){
+        $username = $this->session->userdata('ses_email'); //username menggunakan email
+        $password=htmlspecialchars($this->input->post('passwordLama',TRUE),ENT_QUOTES);
 
+        $cek_role=$this->Login_model->m_cekuser_login($username,$password);
+ 
+        if($cek_role->num_rows() > 0){ //jika username dan password sesuai
+            $num_rows = $cek_role->num_rows();
+            echo $num_rows;
+        }
+    }
+
+    function ubah_password(){
+        $username           = $this->session->userdata('ses_email'); //username menggunakan email
+        $password           =htmlspecialchars($this->input->post('passwordLama',TRUE),ENT_QUOTES);
+        $password_baru      =htmlspecialchars($this->input->post('password',TRUE),ENT_QUOTES);
+        $password_baru_lagi =htmlspecialchars($this->input->post('password_retype',TRUE),ENT_QUOTES);
+
+        $cek_role=$this->Login_model->m_cekuser_login($username,$password);
+ 
+        if ($password_baru != $password_baru_lagi){
+            sa_alert('error', 'GALAT!!!', 'password baru dan password konfirmasi tidak sama!', $_SERVER['HTTP_REFERER']);
+        } else if (strlen($password) < 4 || strlen($password_baru) < 4 || strlen($password_baru_lagi) < 4 ){
+            sa_alert('error', 'GALAT!!!', 'data belung lengkap!, minimal 5 karakter'.$password.'|'.$password_baru.'|'.$password_baru_lagi, $_SERVER['HTTP_REFERER']);
+        } else {
+            if($cek_role->num_rows() > 0){ //jika username dan password sesuai
+                $user = array(array(
+                        'password'  => md5($password_baru),
+                        'updated_at'=> date("Y-m-d H:i:s")
+                    ));
+                $update = $this->User_model->ubah($user, $this->session->userdata('ses_id')); //menjalankan update
+                if ($update) {
+                    //echo $this->db->last_query();
+                    sa_alert('success', 'Mantul..', 'Password berhasil diupdate!!', $_SERVER['HTTP_REFERER']);
+                } else {
+                    sa_alert('error', 'Oops..', 'Gagal mengubah password lama!!!', $_SERVER['HTTP_REFERER']);
+                }  
+            } else {
+                sa_alert('error', 'GALAT!!!', 'password lama tidak cocok!', $_SERVER['HTTP_REFERER']);
+            }
+        }
+    }
+
+    function cek_user($no_ktp, $no_tlp, $alamat){
+        $cek_valid_id=$this->User_model->m_cekuser_valid($no_ktp,$no_tlp,$alamat);
+ 
+        if($cek_valid_id->num_rows() > 0){ //jika username dan password sesuai
+            $num_rows = $cek_valid_id->num_rows();
+            echo $num_rows;
+        }
+    }
 }
 ?>

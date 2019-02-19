@@ -10,8 +10,8 @@
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="<?php echo base_url('new_images/favicon.png'); ?>">
-    <link rel="shortcut icon" href="<?php echo base_url('new_images/favicon.png'); ?>">
+    <link rel="apple-touch-icon" href="<?php echo base_url('new_images/head_logo_acquila.png'); ?>">
+    <link rel="shortcut icon" href="<?php echo base_url('new_images/head_logo_acquila.png'); ?>">
     
     <!-- theme require -->
     <link rel="stylesheet" href="<?php echo base_url('new_assets/css/normalize.css'); ?>">
@@ -20,19 +20,15 @@
     <link rel="stylesheet" href="<?php echo base_url('new_assets/css/themify-icons.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('new_assets/css/pe-icon-7-filled.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('new_assets/css/flag-icon.min.css'); ?>">
-    <link rel="stylesheet" href="<?php echo base_url('new_assets/css/cs-skin-elastic.css'); ?>">
-
-    <!-- add ons, depends on page need -->
-    <link href="<?php echo base_url('new_assets/weather/css/weather-icons.css'); ?>" rel="stylesheet" />
-    <link href="<?php echo base_url('new_assets/calendar/fullcalendar.css'); ?>" rel="stylesheet" />
-    <link rel="stylesheet" href="<?php echo base_url('new_assets/css/lib/datatable/dataTables.bootstrap.min.css'); ?>">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-
-    
+    <link rel="stylesheet" href="<?php echo base_url('new_assets/css/cs-skin-elastic.css'); ?>">    
     <!-- theme require -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<?php echo base_url('new_assets/css/style.css'); ?>">
-    <!-- add ons, depends on page need -->
-    <link href="<?php echo base_url('new_assets/css/charts/chartist.min.css" rel="stylesheet'); ?>"> 
+    
+    <!-- add ons, depends on page need -->    
+    <link rel="stylesheet" href="<?php echo base_url('new_assets/css/lib/datatable/dataTables.bootstrap.min.css'); ?>">
+    
+    <link href="<?php echo base_url('new_assets/css/lib/toastr/toastr.min.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('new_assets/css/lib/vector-map/jqvmap.min.css" rel="stylesheet'); ?>"> 
 
 

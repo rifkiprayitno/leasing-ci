@@ -60,27 +60,7 @@
                         <!--/span-->
                     </div>
                     <!--/row-->
-                    <div class="row p-t-20">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="control-label">Password</label>
-                                <small class="form-control-feedback"><?php echo form_error('password', '<div class="alert alert-danger" >', '</div>'); ?> </small> 
-                                <input type="password" id="password" name="password" class="form-control" value="<?php echo (isset($user[0]['password'])) ? $user[0]['password'] : ''; ?>" required>
-                                <small class="form-control-feedback"> password lebih dari 6 karaker</small> 
-                            </div>
-                        </div>
-                        <!--/span-->
-                        <div class="col-md-6">
-                            <div class="form-group has-danger">
-                                <label class="control-label">Konfirmasi Password</label>
-                                <small class="form-control-feedback"><?php echo form_error('konfirmasi_password', '<div class="alert alert-danger" >', '</div>'); ?> </small> 
-                                <input type="password" id="konfirmasi_password" name="konfirmasi_password" class="form-control form-control-danger" value="<?php echo (isset($user[0]['password'])) ? $user[0]['password'] : ''; ?>" required>
-                                <small class="form-control-feedback"> tulis ulang password <?php echo form_error('field name', '<div class="error">', '</div>'); ?> </small>
-                                
-                            </div>
-                        </div>
-                    <!--/span-->
-                    </div>
+                
                     <div class="row p-t-20">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -106,10 +86,7 @@
                             <div class="form-group">
                                 <label class="control-label">Level</label>
                                 <select class="form-control custom-select" name="level" required>
-                                    <option value="admin" <?php echo (isset($user[0]) && $user[0]['level'] == 'admin') ? 'selected' : ''; ?> >Administrator</option>
-                                    <option value="owner" <?php echo (isset($user[0]) && $user[0]['level'] == 'owner') ? 'selected' : ''; ?>>Owner</option>
-                                    <option value="collector" <?php echo (isset($user[0]) && $user[0]['level'] == 'collector') ? 'selected' : ''; ?>>Collection</option>
-                                    <option value="sales" <?php echo (isset($user[0]) && $user[0]['level'] == 'sales') ? 'selected' : ''; ?>>Sales</option>
+                                    <option value="member" <?php echo (isset($user[0]) && $user[0]['level'] == 'member') ? 'selected' : ''; ?>>Pelanggan</option>
                                 </select>
                             </div>
                         </div>
@@ -120,6 +97,50 @@
 
                     <h3 class="box-title m-t-40">Alamat</h3>
                     <hr>
+                    <div class="row p-t-20">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Provinsi</label>
+                                <select class="form-control custom-select" name="level" required>
+                                    <option value="member" <?php echo (isset($user[0]) && $user[0]['level'] == 'member') ? 'selected' : ''; ?>>Pelanggan</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--/span-->
+                       <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Kabupaten</label>
+                                <select class="form-control custom-select" name="level" required>
+                                    <option value="member" <?php echo (isset($user[0]) && $user[0]['level'] == 'member') ? 'selected' : ''; ?>>Pelanggan</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--/span-->
+
+                    </div>
+                    <!--/row-->
+                    <div class="row p-t-20">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Kecamatan</label>
+                                <select class="form-control custom-select" name="level" required>
+                                    <option value="member" <?php echo (isset($user[0]) && $user[0]['level'] == 'member') ? 'selected' : ''; ?>>Pelanggan</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--/span-->
+                       <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Kelurahan</label>
+                                <select class="form-control custom-select" name="level" required>
+                                    <option value="member" <?php echo (isset($user[0]) && $user[0]['level'] == 'member') ? 'selected' : ''; ?>>Pelanggan</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--/span-->
+
+                    </div>
+                    <!--/row-->
                     <div class="row">
                         <div class="col-md-12 ">
                             <div class="form-group">
@@ -183,17 +204,3 @@
 </div><!-- .content -->
 
 <script src="<?php echo base_url('new_assets/js/vendor/jquery-2.1.4.min.js'); ?>"></script>
-<!-- script validasi ulang password   -->
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('#konfirmasi_password').change(function(){
-        var passpertama=$('#password').val();
-        var passkedua=$('#konfirmasi_password').val();
-            if($('#password').val() != $('#konfirmasi_password').val()){
-                 $('#konfirmasi_password').css('background','#e74c3c');
-        }else if(passpertama == passkedua){
-            $('#konfirmasi_password').css('background','#2ecc71');
-        }
-      });               
-    });     
-</script>

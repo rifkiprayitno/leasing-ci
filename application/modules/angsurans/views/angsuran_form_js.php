@@ -10,6 +10,12 @@ $(function(){
     });
 });
 
+$("#bayar").keyup(function() {
+  var angka = $("#bayar").val();
+  angka = angka.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+  $("#small_bayar").html("Rp. "+angka);       
+});
+
     $("#cari").click(function(){
         $("aplikasi_atas").show();
         $("aplikasi_bawah").show();
@@ -85,8 +91,8 @@ $(function(){
                     document.getElementById("insert_angsuran").style.display = "block"; 
                     console.log('nama barang -> '+data.barang_nama);
                     console.log('tenor -> '+data.tenor);
-                    console.log('kode -> '+data.aplikasi_kdoe);
-                    console.log('angsuran -> '+data.angsuran);
+                    console.log('kode -> '+data.aplikasi_kode);
+                    
                     //read data, and put the value
                     document.getElementById("nomor_cari").value = data.aplikasi_kode;
 
@@ -99,6 +105,7 @@ $(function(){
                     document.getElementById("status").value = data.status;
 
                     if (!kode){
+                        console.log('angsuran (kode)-> '+data.angsuran);
                         document.getElementById("bayar").value = data.angsuran;
                         populateSelect("select_tenor", 1, data.tenor);
                     }

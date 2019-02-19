@@ -3,6 +3,14 @@ $config = array(
 
 	'registrasi' => array(
 		array(
+			'field' => 'nama',
+			'label' => 'Nama',
+			'rules' => 'required',
+			'errors'=> array(
+				'required' 	=> '%s harus diisi.',
+			)
+		),
+		array(
 			'field' => 'password',
 			'label' => 'Password',
 			'rules' => 'required|min_length[6]',
@@ -26,6 +34,45 @@ $config = array(
 			'rules' => 'required|valid_email',
 			'errors'=> array(
 				'required' 	=> '%s harus diisi.',
+				'valid_email'=> '%s tidak valid!'
+			)
+		),
+		array(
+			'field' => 'no_hp',
+			'label' => 'Nomor Handphone',
+			'rules' => 'required|numeric|min_length[10]',
+			'errors'=> array(
+				'required' 	=> '%s harus diisi.',
+				'numeric'	=> '%s isi dengan angka!',
+				'min_length'=> '%s minimal 10 digit angka'
+			)
+		),
+		array(
+			'field' => 'no_ktp',
+			'label' => 'Nomor KTP',
+			'rules' => 'required|numeric|min_length[14]',
+			'errors'=> array(
+				'required' 	=> '%s harus diisi.',
+				'numeric'	=> '%s isi dengan angka!',
+				'min_length'=> '%s minimal 14 digit angka'
+			)
+		)			
+	),
+
+	'registrasi_p' => array(
+		array(
+			'field' => 'nama',
+			'label' => 'Nama',
+			'rules' => 'required',
+			'errors'=> array(
+				'required' 	=> '%s harus diisi.',
+			)
+		),
+		array(
+			'field' => 'email',
+			'label' => 'Email',
+			'rules' => 'valid_email',
+			'errors'=> array(
 				'valid_email'=> '%s tidak valid!'
 			)
 		),

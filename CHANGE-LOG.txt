@@ -22,3 +22,12 @@
 #10/11/2018 => menerapkan modal datatable pada view index angsuran => RIFKI
 
 #21/11/2018 => module angsuran sudah berjalan, insert&update => RIFKI
+
+#06/12/2018 => javascript di sederhanakan lagi, di load sesuai kebtuhan page saja => RIFKI
+#06/12/2018 => toastr dapat berjalan, debugs->debugs_toastr => RIFKI
+#06/12/2018 => inputan aplikasi baru di sederhanakan => RIFKI
+#06/12/2018 => dashboard menggunakan DB => RIFKI
+
+#19/02/2019 => menambahkan modul pelanggans & laporans => RIFKI
+#19/02/2019 => menambahkan tabel provinsi,kabopaten,kecamatan,kelurahanpadadb_leasing => RIFKI
+#19/02/2019 => GALAT -> fitur change password harusditambahanakn sytax jquery padastiap form => RIFKI

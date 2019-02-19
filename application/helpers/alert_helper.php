@@ -31,7 +31,7 @@ function sa_alert($type, $title = 'Success !!', $text, $location){
 	"; 
 }
 
-function trial_alert($type, $title, $text, $location){
+function trial_alert($type, $title, $text, $location=''){
 	?>
 	<!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url('assets/images/favicon.png'); ?>">
@@ -118,4 +118,12 @@ function confirm_alert(){
 	';
 }
 
+function top_right_toastr($type, $title, $message){
+	?>
+	<script type="text/javascript">
+		toastr.+<?php echo $type; ?>+("<?php echo $message; ?>", "<?php echo $title; ?>");
+		// toastr.success("Data ditemukan! mengarahkan...",'Mantap Betul!!!');
+	</script>
+	<?php
+}
 ?>

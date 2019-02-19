@@ -41,9 +41,7 @@
 </div><!-- .content -->
 
 <!-- javascript get data to datatable -->
-
-<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
-<script src="<?php echo base_url('new_assets/js/vendor/jquery-2.1.4.min.js'); ?>"></script>
+<!-- <script src="<?php //echo base_url('new_assets/js/vendor/jquery-2.1.4.min.js'); ?>"></script> -->
 <script src="<?php echo base_url('new_assets/js/lib/data-table/datatables.min.js'); ?>"></script>
 <script src="<?php echo base_url('new_assets/js/lib/data-table/dataTables.bootstrap.min.js'); ?>"></script>
 <script src="<?php echo base_url('new_assets/js/lib/data-table/dataTables.buttons.min.js'); ?>"></script>
@@ -56,8 +54,7 @@
 <script src="<?php echo base_url('new_assets/js/lib/data-table/buttons.colVis.min.js'); ?>"></script>
 <script src="<?php echo base_url('new_assets/js/lib/data-table/datatables-init.js'); ?>"></script>
 
-<script type="text/javascript">
- 
+<script type="text/javascript"> 
     var save_method; //for save method string
     var table;
  

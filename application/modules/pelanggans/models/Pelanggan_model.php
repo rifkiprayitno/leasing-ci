@@ -2,7 +2,7 @@
 /**
 * 
 */
-class User_model extends CI_Model
+class Pelanggan_model extends CI_Model
 {
 	
 	public function tampil()
@@ -38,11 +38,11 @@ class User_model extends CI_Model
 	}
 
 	//generate dataTable serverside method
-	function get_all_user() { //datatable server side, colom sesuaikan dgn tabel jgn di lebihi id saja
+	function get_all_customer() { //datatable server side, colom sesuaikan dgn tabel jgn di lebihi id saja
       $this->datatables->from('users u');
       //select kolom yang dimunculkan di tabel saja, bila tidak search|sort tidak akan berjalan
       $this->datatables->select('nama, no_ktp, level, email, handphone, alamat, user_id');
-      $this->datatables->where("level !=", "member");
+      $this->datatables->where("level =", "member");
       $this->datatables->add_column('action', 
       		'<a href="'.base_url().'users/ubah/$1" class="btn btn-primary btn-flat btn-addon btn-sm m-b-10 m-l-5" title="Lihat Data"><i class="fa fa-eye"></i></a>
       		<a class="edit-link btn btn-warning btn-flat btn-addon btn-sm m-b-10 m-l-5" title="Edit Data" href="'.base_url().'users/ubah/$1"><i class="fa fa-edit"></i></a>

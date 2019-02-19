@@ -1,3 +1,8 @@
+<!-- add ons, depends on page need -->
+<link href="<?php echo base_url('new_assets/css/charts/chartist.min.css" rel="stylesheet'); ?>">     
+<link href="<?php echo base_url('new_assets/weather/css/weather-icons.css'); ?>" rel="stylesheet" />
+<link href="<?php echo base_url('new_assets/calendar/fullcalendar.css'); ?>" rel="stylesheet" />
+
 <div class="content pb-0">
 
             <!-- Widgets  -->
@@ -12,7 +17,7 @@
                                 <div class="stat-content">
                                     <div class="text-left dib"> 
                                         <div class="stat-text">$<span class="count">23569</span></div>
-                                        <div class="stat-heading">Revenue</div>
+                                        <div class="stat-heading">Pedapatan</div>
                                     </div>
                                 </div>
                             </div>
@@ -25,12 +30,12 @@
                         <div class="card-body">
                             <div class="stat-widget-five">
                                 <div class="stat-icon dib flat-color-2">
-                                    <i class="pe-7f-cart"></i>
+                                    <i class="fa fa-handshake-o"></i>
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-text"><span class="count">3435</span></div>
-                                        <div class="stat-heading">Sales</div> 
+                                        <div class="stat-text"><span class="count"><?php echo $jumlah_aplikasi; ?></span></div>
+                                        <div class="stat-heading">Aplikasi</div> 
                                     </div>
                                 </div>
                             </div>
@@ -43,12 +48,12 @@
                         <div class="card-body">
                             <div class="stat-widget-five">
                                 <div class="stat-icon dib flat-color-3">
-                                    <i class="pe-7f-browser"></i>
+                                    <i class="fa fa-diamond"></i>
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib"> 
-                                        <div class="stat-text"><span class="count">349</span></div>
-                                        <div class="stat-heading">Templates</div>
+                                        <div class="stat-text"><span class="count"><?php echo $jumlah_barang; ?></span></div>
+                                        <div class="stat-heading">Barang</div>
                                     </div>
                                 </div>
                             </div>
@@ -65,8 +70,8 @@
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib"> 
-                                        <div class="stat-text"><span class="count">2986</span></div>
-                                        <div class="stat-heading">Clients</div>
+                                        <div class="stat-text"><span class="count"><?php echo $jumlah_konsumen; ?></span></div>
+                                        <div class="stat-heading">Konsumen</div>
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +144,7 @@
                     <div class="col-xl-8"> 
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="box-title">Orders </h4>
+                                <h4 class="box-title">Angsuran</h4>
                             </div>
                             <div class="card-body--">
                                 <div class="table-stats order-table ov-h">
@@ -148,15 +153,15 @@
                                             <tr>
                                                 <th class="serial">#</th>
                                                 <th class="avatar">Avatar</th>
-                                                <th>ID</th>
-                                                <th>Name</th>
-                                                <th>Product</th>
-                                                <th>Quantity</th>
+                                                <th>KTP</th>
+                                                <th>Nama</th>
+                                                <th>Barang</th>
+                                                <th>ke</th>
                                                 <th>Status</th>
                                             </tr>
                                         </thead>
                                         <tbody> 
-                                            <tr>
+                                            <!-- <tr>
                                                 <td class="serial">1.</td>
                                                 <td class="avatar">
                                                     <div class="round-img">
@@ -170,67 +175,29 @@
                                                 <td> 
                                                     <span class="badge badge-complete">Complete</span>
                                                 </td> 
-                                            </tr>
+                                            </tr> -->
+
+                                        <?php
+                                        $number = 0;
+                                            foreach ($lima_angsuran as $baris) {
+                                                $number +=1;
+                                        ?>
                                             <tr>
-                                                <td class="serial">2.</td>
+                                                <td class="serial"><?php echo $number; ?>.</td>
                                                 <td class="avatar">
                                                     <div class="round-img">
-                                                        <a href="#"><img class="rounded-circle" src="<?php echo base_url('new_images/avatar/2.jpg'); ?>" alt=""></a> 
+                                                        <a href="#"><img class="rounded-circle" src="<?php echo base_url('new_images/avatar/1.jpg'); ?>" alt=""></a>
                                                     </div>
+                                                </td>
+                                                <td><?php echo $baris->no_ktp; ?></td>
+                                                <td>  <span class="name"><?php echo $baris->nama; ?></span> </td>
+                                                <td> <span class="product"><?php echo $baris->barang_nama; ?></span> </td>
+                                                <td><span class="count"><?php echo $baris->angsuran_ke; ?></span></td>
+                                                <td> 
+                                                    <span class="badge badge-complete">Complete</span>
                                                 </td> 
-                                                <td> #5468 </td>
-                                                <td>  <span class="name">Gregory Dixon</span> </td> 
-                                                <td> <span class="product">iPad</span> </td>
-                                                <td><span class="count">250</span></td>
-                                                <td> 
-                                                    <span class="badge badge-complete">Complete</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="serial">3.</td>
-                                                <td class="avatar">
-                                                    <div class="round-img">
-                                                        <a href="#"><img class="rounded-circle" src="<?php echo base_url('new_images/avatar/3.jpg'); ?>" alt=""></a> 
-                                                    </div>
-                                                </td>
-                                                <td> #5467 </td>
-                                                <td>  <span class="name">Catherine Dixon</span> </td> 
-                                                <td> <span class="product">SSD</span> </td>
-                                                <td><span class="count">250</span></td>
-                                                <td> 
-                                                    <span class="badge badge-complete">Complete</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="serial">4.</td>
-                                                <td class="avatar">
-                                                    <div class="round-img">
-                                                        <a href="#"><img class="rounded-circle" src="<?php echo base_url('new_images/avatar/4.jpg'); ?>" alt=""></a> 
-                                                    </div>
-                                                </td>
-                                                <td> #5466 </td>
-                                                <td>  <span class="name">Mary Silva</span> </td> 
-                                                <td> <span class="product">Magic Mouse</span> </td>
-                                                <td><span class="count">250</span></td>
-                                                <td> 
-                                                    <span class="badge badge-pending">Pending</span>
-                                                </td>
-                                            </tr>
-                                            <tr class=" pb-0">
-                                                <td class="serial">5.</td>
-                                                <td class="avatar pb-0">
-                                                    <div class="round-img">
-                                                        <a href="#"><img class="rounded-circle" src="<?php echo base_url('new_images/avatar/6.jpg'); ?>" alt=""></a> 
-                                                    </div>
-                                                </td>
-                                                <td> #5465 </td>
-                                                <td>  <span class="name">Johnny Stephens</span> </td> 
-                                                <td> <span class="product">Monitor</span> </td>
-                                                <td><span class="count">250</span></td>
-                                                <td> 
-                                                    <span class="badge badge-complete">Complete</span>
-                                                </td>
-                                            </tr>
+                                            </tr>  
+                                        <?php } ?>  
                                         </tbody>
                                     </table>
                                 </div> <!-- /.table-stats -->
@@ -270,7 +237,7 @@
 
 
             <!-- To Do and Live Chat --> 
-            <div class="row">
+            <div class="row" hidden>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-body">
@@ -486,7 +453,11 @@
 
 
 
-
+<!--  -->
+    <?php 
+    $this->view('dashboard/new_dashboard_js'); 
+    ?>
+<!--  -->
 
 
  

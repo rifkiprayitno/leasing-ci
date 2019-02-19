@@ -145,8 +145,8 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="control-label">Bayar</label>
-                                <input type="number" id="bayar" name="bayar" class="form-control" value="<?php echo (isset($angsuran[0]['bayar'])) ? $angsuran[0]['bayar'] : (isset($angsuran[0]['angsuran'])) ? $angsuran[0]['angsuran'] : ''; ?>" required>
-                                <small class="form-control-feedback"> isi dengan nominal pembayaran</small> 
+                                <input type="number" id="bayar" name="bayar" class="form-control" value="<?php echo ((isset($angsuran[0]['bayar'])) ? $angsuran[0]['bayar'] : ((isset($angsuran[0]['angsuran'])) ? $angsuran[0]['angsuran'] : '')); ?>" required>
+                                <small class="form-control-feedback" id="small_bayar"> isi dengan nominal pembayaran</small> 
                             </div>
                         </div>                     
                     <!--/span-->

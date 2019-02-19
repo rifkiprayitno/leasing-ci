@@ -1,64 +1,32 @@
-<div class="content">
+ <div class="content">
     <div class="animated fadeIn">
         <div class="row">
 
 <div class="col-lg-12">
 <div class="card">
     <div class="card-body">
-        <h4 class="card-title">Data Barang</h4>
-        <h6 class="card-subtitle">berikut tabel tetang barang yang terdata dalam sistem</h6>
-        <button class="btn btn-success" onclick="window.location.href='<?php echo base_url('barangs/tambah'); ?>'"><i class="fa fa-plus-circle"></i> Tambah Data</button>
+        <h4 class="card-title">Data Pelanggan</h4>
+        <h6 class="card-subtitle">berikut tabel tetang pelanggan yang terdata dalam sistem</h6>
+        <button class="btn btn-success" onclick="window.location.href='<?php echo base_url('pelanggans/tambah'); ?>'"><i class="fa fa-plus-circle"></i> Tambah Data</button>
         <button class="btn btn-default" onclick="reload_table()"><i class="fa fa-refresh"></i> Muat Ulang</button>
         <hr>
         <div class="table-responsive m-t-40">
-            <table id="data-table-barang" class="table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+            <table id="datatable-user" class="table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                 <thead>
                     <tr>
                         <th>No</th>
-<div class="col-lg-12">
-<div class="card">
-    <div class="card-body">
-        <h4 class="card-title">Data Export</h4>
-        <h6 class="card-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
-        <div class="table-responsive m-t-40">
-            <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
-                <thead>
-                    <tr>
                         <th>Nama</th>
-                        <th>Harga</th>
-                        <th>Insentif</th>
-                        <th>Detail</th>
+                        <th>No Ktp</th>
+                        <th>Email</th>
+                        <th>No Hp</th>
+                        <th>Alamat</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 
                 <tbody >
-                    <!-- isi data dari ajax -->   
-                <tfoot>
-                    <tr>
-                        <th>Nama</th>
-                        <th>Harga</th>
-                        <th>Insentif</th>
-                        <th>Detail</th>
-                        <th>Aksi</th>
-                    </tr>
-                </tfoot>
-                <tbody>
-                <?php
-                    foreach ($tampil as $baris) {
-                ?>
-                    <tr>
-                        <td><?php echo $baris->barag_nama; ?></td>
-                        <td><?php echo $baris->harga; ?></td>
-                        <td><?php echo $baris->insentif; ?></td>
-                        <td><?php echo $baris->detail; ?></td>
-                        <td>
-                            <a href="<?php echo 'users/ubah/'.$baris->barang_id; ?>">Lihat</a>
-                            <a class="edit-link" href="<?php echo 'users/ubah/'.$baris->barang_id; ?>">Edit</a>
-                            <a class="hapus-link" href="<?php echo 'users/hapus/'.$baris->barang_id; ?>">Hapus</a>                          
-                        </td>
-                    </tr>  
-                <?php } ?>  
+                    <!-- isi data dari ajax -->                     
+                                                                            
                 </tbody>
             </table>
         </div>
@@ -66,14 +34,13 @@
 </div>
 </div>
 
+
 </div><!-- .row -->
 </div><!-- .animated -->
 </div><!-- .content -->
 
 <!-- javascript get data to datatable -->
-
-<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
-<script src="<?php echo base_url('new_assets/js/vendor/jquery-2.1.4.min.js'); ?>"></script>
+<!-- <script src="<?php //echo base_url('new_assets/js/vendor/jquery-2.1.4.min.js'); ?>"></script> -->
 <script src="<?php echo base_url('new_assets/js/lib/data-table/datatables.min.js'); ?>"></script>
 <script src="<?php echo base_url('new_assets/js/lib/data-table/dataTables.bootstrap.min.js'); ?>"></script>
 <script src="<?php echo base_url('new_assets/js/lib/data-table/dataTables.buttons.min.js'); ?>"></script>
@@ -86,13 +53,12 @@
 <script src="<?php echo base_url('new_assets/js/lib/data-table/buttons.colVis.min.js'); ?>"></script>
 <script src="<?php echo base_url('new_assets/js/lib/data-table/datatables-init.js'); ?>"></script>
 
-<script type="text/javascript">
- 
+<script type="text/javascript"> 
     var save_method; //for save method string
     var table;
  
     $(document).ready(function() {
-//data table load setting
+    //data table load setting
         $.fn.dataTableExt.oApi.fnPagingInfo = function(oSettings)
         {
             return {
@@ -106,10 +72,10 @@
             };
         };
 
-        table = $("#data-table-barang").dataTable({
+        table = $("#datatable-user").dataTable({
             initComplete: function() {
                 var api = this.api();
-                $('#data-table_filter input')
+                $('#datatable-user_filter input')
                     .off('.DT')
                     .on('input.DT', function() {
                         api.search(this.value).draw();
@@ -122,16 +88,17 @@
             processing: true,
             serverSide: true,
             "ajax": {
-                "url": '<?php echo site_url('barangs/get_barang_json'); ?>',
+                "url": '<?php echo site_url('pelanggans/get_customer_json'); ?>',
                 "type": "POST"
             },
             //Set column definition initialisation properties.
             "columns": [
-                {"data": "barang_id",width:70},
-                {"data": "barang_nama",width:170},
-                {"data": "harga",width:100},
-                {"data": "insentif",width:70},
-                {"data": "detail",width:100},
+                {"data": "user_id",width:70},
+                {"data": "nama",width:170},
+                {"data": "no_ktp",width:100},
+                {"data": "email",width:100},
+                {"data": "handphone",width:100},                        
+                {"data": "alamat",width:100},
                 {"data": "action",width:100}
             ],
             order: [[2, 'desc']],
@@ -146,6 +113,7 @@
     //**end**
     });
 
+
 function add_person()
 {
     save_method = 'add';
@@ -158,13 +126,13 @@ function add_person()
 
 function reload_table()
 {
-    table.ajax.reload(null,false); //reload datatable ajax 
+    $('#datatable-user').dataTable().ajax.reload(); //reload datatable ajax 
 }
 
 function del(id){
     if(confirm('Yakin menghapus data ?')){
         $.ajax({
-                url :"<?php echo site_url();?>barangs/hapus/"+id,
+                url :"<?php echo site_url();?>users/hapus/"+id,
                 type:"post",
                 success:function(){
                     location.reload();
@@ -173,4 +141,3 @@ function del(id){
     }
 }
 </script>
-</div>

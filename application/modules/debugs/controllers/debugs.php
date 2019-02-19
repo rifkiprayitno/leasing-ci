@@ -28,6 +28,13 @@ class Debugs extends MX_Controller
         $this->load->view('aplikasis/aplikasi_form');
     }
 
+    function debug_toastr(){
+        $data['title'] = 'index | Barangs';
+
+        $page = 'debugs/debug_toastr';
+
+        echo modules::run('new_template/loadview', $data, $page);
+    }
 
     function example_dua(){
         $this->load->view('sample_modal_dt');

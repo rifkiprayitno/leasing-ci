@@ -5,8 +5,8 @@
         <header id="header" class="header">  
             <div class="top-left">
                 <div class="navbar-header"> 
-                    <a class="navbar-brand" href="./"><img src="<?php echo base_url('new_images/logo.png'); ?>" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="./"><img src="<?php echo base_url('new_images/logo2.png'); ?>" alt="Logo"></a> 
+                    <a class="navbar-brand" href="./"><img src="<?php echo base_url('new_images/logo_acquila.png'); ?>" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="./"><img src="<?php echo base_url('new_images/head_logo_acquila.png'); ?>" alt="Logo"></a> 
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a> 
                 </div> 
             </div>
@@ -93,11 +93,9 @@
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="<?php echo base_url('users/profile'); ?>"><i class="fa fa-user"></i>My Profile</a>
+                            <a class="nav-link" href="<?php echo base_url('users/profile'); ?>"><i class="fa fa-user"></i>Profil Ku</a>
 
-                            <a class="nav-link" href="#"><i class="fa fa-bell-o"></i>Notifications <span class="count">13</span></a>
-
-                            <a class="nav-link" href="#"><i class="fa fa-cog"></i>Settings</a>
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#changePassModal"><i class="fa fa-cog"></i>Pengaturan</a>
 
                             <a class="nav-link" href="<?php echo base_url('auth/logout'); ?>"><i class="fa fa-power-off"></i>Logout</a>
                         </div>

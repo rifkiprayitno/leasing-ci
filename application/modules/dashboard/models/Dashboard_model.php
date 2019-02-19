@@ -2,12 +2,34 @@
 /**
 * 
 */
-class Barang_model extends CI_Model
+class Dashboard_model extends CI_Model
 {
 	
-	public function tampil()
+	public function total_konsumen()
+	{
+		$data = $this->db->query("SELECT * FROM users WHERE level='member'");
+		return $data->num_rows();
+	}
+
+	public function total_barang()
 	{
 		$data = $this->db->query("SELECT * FROM barangs");
+		return $data->num_rows();
+	}
+
+	public function total_aplikasi()
+	{
+		$data = $this->db->query("SELECT * FROM aplikasis");
+		return $data->num_rows();
+	}
+
+	public function tampil_lima_angsuran()
+	{
+		$data = $this->db->query("SELECT * FROM angsurans an, aplikasis a, users u, barangs b
+								WHERE an.angsuran_aplikasi_kode=a.aplikasi_kode AND a.aplikasi_user_id=u.user_id 
+									AND a.aplikasi_barang_id=b.barang_id
+								ORDER BY an.created_at DESC
+                                LIMIT 5");
 		return $data->result();
 	}
 

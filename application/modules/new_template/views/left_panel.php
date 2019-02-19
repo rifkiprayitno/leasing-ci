@@ -6,9 +6,9 @@
                     <li class="active">
                         <a href="<?php echo base_url('dashboard'); ?>"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
-                    <li class="menu-title">App</li><!-- /.menu-title -->
+                    <li class="menu-title">Data</li><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-address-book"></i>Pengguna</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-address-card-o"></i>Pengguna</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-plus-circle"></i><a href="<?php echo base_url('users/tambah'); ?>">&nbsp;Tambah</a></li>
                             <li><i class="fa fa-eye"></i><a href="<?php echo base_url('users/index'); ?>">&ensp;Lihat</a></li>
@@ -22,6 +22,14 @@
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users"></i>Pelanggan</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-plus-circle"></i><a href="<?php echo base_url('pelanggans/tambah'); ?>">&nbsp;Tambah</a></li>
+                            <li><i class="fa fa-eye"></i><a href="<?php echo base_url('pelanggans/index'); ?>">&ensp;Lihat</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-title">Proses</li>
+                      <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-handshake-o"></i>Aplikasi</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-plus-circle"></i><a href="<?php echo base_url('aplikasis/tambah'); ?>">&nbsp;Tambah</a></li>
@@ -35,16 +43,27 @@
                             <li><i class="fa fa-eye"></i><a href="<?php echo base_url('angsurans/index'); ?>">&ensp;Lihat</a></li>
                         </ul>
                     </li>
-
-                    <!-- <li class="menu-title">Extras</li>
+                    <li class="menu-title">OUTPUT</li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Bridging BPJS</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file-text-o"></i>Laporan</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo base_url(); ?>bridging_bpjs/c_peserta">search</a></li>
-                            <li><i class="menu-icon fa fa-sign-in"></i><a href="<?php echo base_url(); ?>bridging_bpjs/sep">SEP</a></li>
-                            <li><i class="menu-icon fa fa-paper-plane"></i><a href="pages-forget.html">Forget Pass</a></li>
+                            <li><i class="menu-icon fa fa-paper-plane"></i><a href="<?php echo base_url(); ?>laporans/insentif_produk/index_error">Insentif Produk</a></li>
+                            <li><i class="menu-icon fa fa-paper-plane"></i><a href="<?php echo base_url(); ?>laporans/insentif_survey/index_error">Insentif Survey</a></li>
+                            <li><i class="menu-icon fa fa-paper-plane"></i><a href="<?php echo base_url(); ?>laporans/kas_harian/index_error">Kas Harian</a></li>
+                            <li><i class="menu-icon fa fa-paper-plane"></i><a href="<?php echo base_url(); ?>laporans/stock/index_error">Stock</a></li>
+                            <li><i class="menu-icon fa fa-paper-plane"></i><a href="<?php echo base_url(); ?>laporans/komisi/index_error">Komisi</a></li>
+                            <li><i class="menu-icon fa fa-paper-plane"></i><a href="<?php echo base_url(); ?>laporans/pembelian/index_error">Pembelian</a></li>
+                            <li><i class="menu-icon fa fa-paper-plane"></i><a href="<?php echo base_url(); ?>laporans/penjualan/index_error">Penjualan</a></li>
                         </ul>
+                    </li>
+
+                    <!-- 
+                    <li class="menu-title">Simulasi</li>
+                    <li class="">
+                        <a href="<?php echo base_url('dashboard'); ?>"><i class="menu-icon fa fa-laptop"></i>Simulasi Kredit</a>
+                        <a href="<?php echo base_url('debugs/debug_toastr'); ?>"><i class="menu-icon fa fa-laptop"></i>TOASTR</a>
                     </li> -->
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
