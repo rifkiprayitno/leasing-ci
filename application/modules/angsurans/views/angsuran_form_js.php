@@ -74,7 +74,8 @@ $("#bayar").keyup(function() {
 
 //dipake
      function pilihlah(id){        
-        var e   = document.getElementById('info_aplikasi');       
+        var e   = document.getElementById('info_aplikasi');  
+        var a   = document.getElementById('div_aksi');       
         var url = "<?php echo site_url();?>aplikasis/get_data";        
         console.log('pilih ->'+id+' | '+url);    
 
@@ -124,6 +125,7 @@ $("#bayar").keyup(function() {
             $(document.body).removeClass("modal-open");
             $(".modal-backdrop").remove();
             e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+            a.style.display = (a.style.display == 'block') ? 'none' : 'block';
      }
 
 function populateSelect(target, min, max){

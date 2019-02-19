@@ -31,6 +31,7 @@
                                 <label class="control-label">Harga</label>
                                 <input type="number" id="harga" name="harga" class="form-control" value="<?php echo (isset($barang[0])) ? $barang[0]['harga'] : ''; ?>" required>
                                 <small class="form-control-feedback" id="small_harga"> Isi harga </small> 
+                                <small class="form-control-feedback"> Isi harga </small> 
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -38,6 +39,7 @@
                                 <label class="control-label">Insentif</label>
                                 <input type="number" id="insentif" name="insentif" class="form-control" value="<?php echo (isset($barang[0])) ? $barang[0]['insentif'] : ''; ?>" required>
                                 <small class="form-control-feedback" id="small_insentif"> Isi insentif </small> 
+                                <small class="form-control-feedback"> Isi insentif </small> 
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -91,3 +93,4 @@
         $("#small_insentif").html("Rp. "+angka);       
     });
 </script>
+</div><!-- .content -->

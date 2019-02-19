@@ -18,8 +18,8 @@
                     <?php echo validation_errors('<div class="alert alert-danger alert-dismissible fade show">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>', '</div>'); ?>                    
                    
-                    <div class="row p-t-20">
-                        <div class="col-md-7">
+                    <div class="row p-t-12">
+                        <div class="col-md-9">
                             <div class="form-group">
                                 <label class="control-label">Cari Aplikasi</label>
                                 <input type="text" name="nomor_cari" id="nomor_cari" class="form-control" value="<?php echo (isset($angsuran[0]['aplikasi_kode'])) ? $angsuran[0]['aplikasi_kode'] : ''; ?>" required>
@@ -27,19 +27,19 @@
                             </div>
                         </div>
                         <!--/span-->
-                        <div class="col-md-2">
-                            <div class="form-group has-danger">
-                                <label class="control-label"><font color="white">`</font></label>
-                                <button type="button" class="add btn btn-success form-control" data-toggle="modal" data-target="#largeModal">SEARCH</button>
-                            </div>
-                        </div>
-                        <!--/span-->
                         <div class="col-md-3">
                             <div class="form-group has-danger">
                                 <label class="control-label"><font color="white">`</font></label>
-                                <button type="button" class="add btn btn-info form-control" name="cari" id="cari" onclick="showhide('info_aplikasi')"> <i class="fa fa-search"></i> Cari</button>
+                                <button type="button" class="add btn btn-success form-control" data-toggle="modal" data-target="#largeModal"> <i class="fa fa-search"></i> Cari</button>
                             </div>
                         </div>
+                        <!--/span-->
+                    <!--     <div class="col-md-3">
+                        <div class="form-group has-danger">
+                            <label class="control-label"><font color="white">`</font></label>
+                            <button type="button" class="add btn btn-info form-control" name="cari" id="cari" onclick="showhide('info_aplikasi')"> <i class="fa fa-search"></i> Cari</button>
+                        </div>
+                    </div> -->
                     <!--/span-->                        
                     </div>
                     <hr>
@@ -106,9 +106,8 @@
 </div>
 
 
-    <div class="card card-outline-primary">      
-        <div class="card-body">
-           <div id="insert_angsuran" style="display: none">
+    <div class="card card-outline-primary" >      
+        <div class="card-body" id="insert_angsuran" style="display: none">
                     <h3 class="card-title m-t-15">Info Angsuran</h3>
                     <hr>                    
                     <div class="row" >
@@ -152,9 +151,7 @@
                     <!--/span-->
                     </div>
                     <!--/row-->
-                   
-                </div>
-                <div class="form-actions">
+                <div class="form-actions" id="div_aksi">
                     <button type="submit" class="btn btn-success" name="submit"> <i class="fa fa-check"></i> Simpan</button>
                     <button type="button" class="btn btn-inverse">Batalkan</button>
                 </div>
@@ -189,8 +186,6 @@
                     </div>
                 </div>
             </div>
-
-
 </div><!-- .animated -->
 </div><!-- .content -->
  

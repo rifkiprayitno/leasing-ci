@@ -25,7 +25,7 @@
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>', '</div>'); ?>
                     
                    
-                    <div class="row p-t-20">
+                    <div class="row p-t-12">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">Aplikasi Kode</label>
@@ -39,19 +39,34 @@
                                 <input type="text" id="user_id" name="user_id" class="form-control autocomplete" value="<?php echo (isset($aplikasi[0])) ? $aplikasi[0]['aplikasi_user_id'] : ''; ?>">
                                 <small class="form-control-feedback"> Isi aplikasi kode </small> 
                             </div>
+                            <div class="form-group">
+                                <input type="text" id="aplikasi_kode" name="aplikasi_kode" class="form-control autocomplete" value="<?php echo (isset($aplikasi[0])) ? $aplikasi[0]['aplikasi_kode'] : ''; ?>" required>
+                                <small class="form-control-feedback"> Isi aplikasi kode </small> 
+                            </div>
+                        </div>
+                        <!--<div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">user_id</label>-->
+                                <input type="hidden" id="id_user_id" name="id_user_id" class="form-control autocomplete" >
+                                <!--<small class="form-control-feedback"> Isi aplikasi kode </small>-->
+                            <!--</div>
                         </div>
                         <div class="col-md-6" hidden>
                             <div class="form-group">
                                 <label class="control-label">barang_id</label>
                                 <input type="text" id="barang_id" name="barang_id" class="form-control autocomplete" value="<?php echo (isset($aplikasi[0])) ? $aplikasi[0]['aplikasi_barang_id'] : ''; ?>">
                                 <small class="form-control-feedback"> Isi aplikasi kode </small> 
+                                <label class="control-label">barang_id</label>-->
+                                <input type="hidden" id="barang_id" name="barang_id" class="form-control autocomplete" >
+                                <!--<small class="form-control-feedback"> Isi aplikasi kode </small>
                             </div>
                         </div>
-                        <!--/span-->
+                        </span-->
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">Barang</label>
                                 <input type="text" id="barang" name="barang" class="form-control autocomplete"  value="<?php echo (isset($aplikasi[0])) ? $aplikasi[0]['barang_nama'] : ''; ?>" placeholder="tulis nama barang disini..">
+                               
                                 <select class="form-control custom-select" name="barang" required style="display: none;">
                                     <option value="">- pilih barang -</option>
                                     <?php
@@ -80,8 +95,7 @@
                             </div>
                         </div>
                         <!--/span-->
-                        <!--/span-->
-                        <div class="col-md-6" >
+                        <div class="col-md-6" hidden>
                             <div class="form-group">
                                 <label class="control-label">Barang Harga</label>
                                 <input type="text" id="barang_harga" name="barang_harga" class="form-control" value="<?php echo (isset($aplikasi[0]['harga'])) ? $aplikasi[0]['harga'] : ''; ?>"  readonly="">
@@ -115,14 +129,24 @@
                             <div class="form-group">
                                 <label class="control-label">DP</label>
                                 <input type="number" id="dp" name="dp" class="form-control" value="<?php echo (isset($aplikasi[0])) ? $aplikasi[0]['dp'] : ''; ?>" required>
-                                <small class="form-control-feedback" id="small_dp"> Isi DP </small> 
+
+                                <small class="form-control-feedback" id="small_dp"> Isi DP </small>
+
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
+
                                 <label class="control-label">Cicilan</label>
                                 <input type="number" id="angsuran" name="angsuran" class="form-control" value="<?php echo (isset($aplikasi[0])) ? $aplikasi[0]['angsuran'] : ''; ?>" required>
-                                <small class="form-control-feedback" id="small_angsuran"> Isi jumlah nominal cicilan </small> 
+                                <small class="form-control-feedback" id="small_angsuran"> Isi jumlah nominal cicilan </small>                                
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                 <label class="control-label">Angsuran</label>
+                                <input type="number" id="angsuran" name="angsuran" class="form-control" value="<?php echo (isset($aplikasi[0])) ? $aplikasi[0]['angsuran'] : ''; ?>" required>
+                                <small class="form-control-feedback" id="small_angsuran"> Isi angsuran </small> 
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -257,4 +281,5 @@ $(function(){
     {
         $("#tenor").attr('maxlength','2');
     });
+</script>
 </script>

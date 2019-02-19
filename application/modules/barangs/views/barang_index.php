@@ -1,4 +1,5 @@
 <div class="content">
+ <div class="content">
     <div class="animated fadeIn">
         <div class="row">
 
@@ -59,6 +60,7 @@
                         </td>
                     </tr>  
                 <?php } ?>  
+                    <!-- isi data dari ajax -->       
                 </tbody>
             </table>
         </div>
@@ -174,3 +176,4 @@ function del(id){
 }
 </script>
 </div>
+</script>

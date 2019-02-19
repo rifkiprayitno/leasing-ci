@@ -7,8 +7,9 @@
                         <a href="<?php echo base_url('dashboard'); ?>"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
                     <li class="menu-title">Data</li><!-- /.menu-title -->
+                    
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-address-card-o"></i>Pengguna</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-address-book"></i>Pengguna</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-plus-circle"></i><a href="<?php echo base_url('users/tambah'); ?>">&nbsp;Tambah</a></li>
                             <li><i class="fa fa-eye"></i><a href="<?php echo base_url('users/index'); ?>">&ensp;Lihat</a></li>
